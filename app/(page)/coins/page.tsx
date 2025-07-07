@@ -3,8 +3,16 @@ import PaginationComponent from "@/app/(page)/coins/components/pagination/Pagina
 import Search from "@/app/(page)/coins/components/search/Search";
 import { paginationCoins } from "@/app/servises/Coins";
 import React from "react";
+import { PageProps } from "@/.next/types/app/page";
 
-export default async function CoinsPage({ searchParams }: { searchParams: { page?: string; search?: string } }) {
+type Props = PageProps & {
+  searchParams: {
+    page?: string;
+    search?: string;
+  };
+};
+
+export default async function CoinsPage({ searchParams }: Props) {
   const page = searchParams.page || "1";
   const search = searchParams.search?.toLowerCase() || "";
 

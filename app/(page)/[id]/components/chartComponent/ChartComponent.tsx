@@ -7,6 +7,7 @@ import SelectDays from "../selectDays/SelectDays";
 import TogglePriceType from "../togglePriceType/TogglePriceType";
 import DataChart from "../dataChart/DataChart";
 import Spinner from "@/app/components/spinner/Spinner";
+import { SelectChangeEvent } from "@mui/material";
 
 export default function ChartComponent() {
   const params = useParams();
@@ -17,7 +18,7 @@ export default function ChartComponent() {
 
   const { data: chartData, isLoading, error } = useQuery({ queryKey: ["chartData", id, days, priceType], queryFn: () => fetchChartData(id, days, priceType), enabled: !!id });
 
-  const handleDaysChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+  const handleDaysChange = (event: SelectChangeEvent<number | string>) => {
     setDays(event.target.value as number | string);
   };
   const handlePriceTypeChange = (_event: React.MouseEvent<HTMLElement>, newPriceType: string) => {

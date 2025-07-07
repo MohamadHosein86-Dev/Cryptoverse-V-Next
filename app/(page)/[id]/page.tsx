@@ -2,8 +2,9 @@ import { getCoin } from "@/app/servises/Coins";
 import Details from "./components/details/Details";
 import IntroCoinDetails from "./components/introCoinDetails/IntroCoinDetails";
 import Description from "./components/description/Description";
+import { PageProps } from "@/.next/types/app/page";
 
-type Props = {
+type Props = PageProps & {
   params: {
     id: string;
   };

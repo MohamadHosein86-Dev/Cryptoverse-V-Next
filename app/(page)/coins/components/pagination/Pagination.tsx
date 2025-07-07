@@ -8,7 +8,7 @@ const PaginationComponent = ({ totalPages }: { totalPages: number }) => {
 
   const currentPage = Number(searchParams.get("page")) || 1;
 
-  const handlePageChange = (_: number, value: number) => {
+  const handlePageChange = (event: React.ChangeEvent<unknown>, value: number) => {
     const params = new URLSearchParams(searchParams);
     params.set("page", value.toString());
     router.push(`/coins?${params.toString()}`);
