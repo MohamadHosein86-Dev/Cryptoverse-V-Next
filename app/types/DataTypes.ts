@@ -10,6 +10,9 @@ export type CoinType = {
   market_cap: number;
   total_volume: number;
   market_cap_rank: number;
+  description:{
+    en:string
+  }
 };
 
 export type NavLinksType = {
