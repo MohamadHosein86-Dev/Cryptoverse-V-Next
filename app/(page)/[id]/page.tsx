@@ -3,7 +3,12 @@ import Details from "./components/details/Details";
 import IntroCoinDetails from "./components/introCoinDetails/IntroCoinDetails";
 import Description from "./components/description/Description";
 
-export default async function CoinDetails({ params }: { params: { id: string } }) {
+type Props = {
+  params: {
+    id: string;
+  };
+};
+export default async function CoinDetails({ params }: Props) {
   const coin = await getCoin(params.id);
 
   return (
