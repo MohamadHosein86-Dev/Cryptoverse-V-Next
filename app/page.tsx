@@ -1,12 +1,12 @@
 import AboutCrypto from "./components/home/aboutcrypto/AboutCrypto";
-import CoinTable from "./components/home/cointable/CoinTable";
+import CoinTableHomePage from "./components/home/cointable/CoinTableHomePage";
 import Introduction from "./components/home/Introduction/Introduction";
 
 export default function Home() {
   return (
-    <main className=" bg-dark ">
+    <main>
       <Introduction />
-      <CoinTable />
+      <CoinTableHomePage />
       <AboutCrypto />
     </main>
   );

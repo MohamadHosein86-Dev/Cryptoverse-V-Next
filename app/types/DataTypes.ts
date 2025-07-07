@@ -17,6 +17,7 @@ export type NavLinksType = {
   titel:string;
   href:string;
 };
+
 export type AboutCryptoType = {
   id: number;
   titel:string;
@@ -28,6 +29,7 @@ export type CoinDetailsType = {
   id: string;
   name: string;
   symbol: string;
+  market_cap_rank:string
   image: {
     large: string;
   };
@@ -72,3 +74,4 @@ export type ChartDataType = {
   labels: string[];
   datasets: Array<ChartDataset<"line", number[]>>; // Enforcing correct type for datasets
 };
+

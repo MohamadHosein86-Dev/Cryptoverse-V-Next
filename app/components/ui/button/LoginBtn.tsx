@@ -1,18 +1,20 @@
 "use client";
-import { Modal } from "@mui/material";
-import React, { Fragment, useState } from "react";
+import { useState } from "react";
 import LoginForm from "../form/LoginForm";
+import Modal from "../../modal/Modal";
 
 export default function LoginBtn() {
-  const [showModal, setShowModal] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
-    <Fragment>
-      <button onClick={() => setShowModal((res) => !res)} className=" text-white hidden lg:block bg-primary py-3 px-3 rounded-md ">
+    <div>
+      <button onClick={() => setOpen(true)} className=" text-white hidden lg:block bg-primary py-3 px-3 rounded-md ">
         Login / SigUp
       </button>
-      <Modal open={showModal} onClose={() => setShowModal(false)}>
-        <LoginForm />
+      <Modal center={true} isOpen={open} onClose={() => setOpen(false)}>
+        <div>
+          <LoginForm setOpen={setOpen} />
+        </div>
       </Modal>
-    </Fragment>
+    </div>
   );
 }

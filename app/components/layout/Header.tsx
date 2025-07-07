@@ -6,8 +6,8 @@ import LoginBtn from "../ui/button/LoginBtn";
 
 export default function Header() {
   return (
-    <header className=" border-b border-b-snowBorder ">
-      <section className="  flex items-center justify-between container ">
+    <header className=" bg-dark border-[1px] border-primaryBorder ">
+      <section className="  flex items-center justify-between mx-auto max-w-[90rem] p-4 ">
         <Link className="text-2xl text-primary font-semibold flex" href="/">
           <span>C</span>
           <p className="text-white">rypto</p>

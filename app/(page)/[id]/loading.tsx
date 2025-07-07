@@ -1,13 +1,10 @@
 "use client";
-
-import Spinner from "./components/spinner/Spinner";
-import LoadingTable from "./components/table/LoadingTable";
+import Spinner from "@/app/components/spinner/Spinner";
 
 export default function HomeLoading() {
   return (
     <section className=" bg-black relative pt-15 h-screen  ">
       <Spinner />
-      <LoadingTable />
     </section>
   );
 }

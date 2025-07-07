@@ -45,11 +45,10 @@
   --color-soft: #1a1a1a;
 
   --color-snow:#999999;
-  --color-snowBorder:#aaaaaa3c:
-
-
+  --color-primaryBorder:#aaaaaa3c;
 
 }
+
 @layer base {
 
   button,
@@ -63,7 +62,7 @@
     outline: none;
     font-family: "poppins_regular";
   }
-}
+} 
 @layer components {
   .tran-fast {
     @apply duration-200 ease-in transition-all;
@@ -83,36 +82,7 @@
 
 }
 
-/* @utility container {
-  margin:0 auto;
-  padding-inline: 1rem;
-  padding:  1rem;
-  max-width: 90rem;
 
-  @variant sm {
-    padding-inline: 1rem;
-  }
-
-  @variant lg {
-    padding-inline: 1.5rem;
-  }
-
-  @variant xl {
-    padding-inline: 2.5rem;
-  }
-
-  @variant 1_5xl {
-    padding-inline: 3rem;
-  }
-
-  @variant 2xl {
-    padding-inline: 6.25rem;
-  }
-} */
- 
-header , footer , main {
-  background-color: #0D0D0D;
-}
 /*  */
 .ham {
   cursor: pointer;
@@ -148,4 +118,3 @@ header , footer , main {
 .ham1.active .bottom {
   stroke-dashoffset: -138px;
 }
-/*  */
