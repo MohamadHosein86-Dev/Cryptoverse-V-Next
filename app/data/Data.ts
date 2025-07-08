@@ -15,5 +15,7 @@ export const aboutcrypto = [
 export const footerLinks = [
     {id:2,titel:"Github",href:"https://github.com/MohamadHosein86-Dev"},
     {id:3,titel:"Linkdin",href:"/about-us"},
-    {id:4,titel:"telegram",href:"*"}
+    {id:4,titel:"Telegram",href:"*"}
 ] as NavLinksType[];
+
+
