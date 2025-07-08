@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import NavBarDescktop from "./navbar/NavBarDescktop";
-import NavBarMobile from "./navbar/NavBarMobile";
+import NavBarDescktop from "./components/navbar/NavBarDescktop";
+import NavBarMobile from "./components/navbar/NavBarMobile";
 import LoginBtn from "../ui/button/LoginBtn";
 
 export default function Header() {

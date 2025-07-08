@@ -3,7 +3,7 @@ import { navLinks } from "@/app/data/Data";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import LoginBtn from "../../ui/button/LoginBtn";
+import LoginBtn from "../../../ui/button/LoginBtn";
 
 export default function NavBarMobile() {
   const svgRef = useRef<SVGSVGElement>(null);
