@@ -24,7 +24,7 @@ export default function Table({ coins }: { coins: CoinType[] }) {
             </td>
             <td className="p-4">
               <Link href={`/${coin.id}`} className="flex items-center gap-3">
-                <img src={coin.image} alt={coin.id} />
+                <img className=" h-8 " src={coin.image} alt={coin.id} />
                 <p>{coin.name}</p>
                 <p className="max-sm:hidden sm2:block">.</p>
                 <p className="uppercase max-sm:hidden sm2:block">{coin.symbol}</p>

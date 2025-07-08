@@ -1,6 +1,6 @@
 import { CoinDetailsType, CoinType } from "../types/DataTypes";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_UR;
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const getCoins = async () => {
   const response = await fetch(
