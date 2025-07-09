@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function IntroductionFooter() {
   return (
-    <div className="w-[20%] flex  justify-between ">
+    <div className=" gap-12 flex  justify-between ">
       <div className=" flex  flex-col justify-between">
         {navLinks.map((res) => (
           <Link className=" hover:text-primary text-white transition-all " href={res.href} key={res.id}>
