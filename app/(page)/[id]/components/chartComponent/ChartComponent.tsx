@@ -1,13 +1,17 @@
 "use client";
+import SelectDays from "../selectDays/SelectDays";
+import TogglePriceType from "../togglePriceType/TogglePriceType";
+import Spinner from "@/app/components/spinner/Spinner";
+import dynamic from "next/dynamic";
+import { fetchChartData } from "@/app/servises/Coins";
 import { useState } from "react";
 import { useParams } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
-import { fetchChartData } from "@/app/servises/Coins";
-import SelectDays from "../selectDays/SelectDays";
-import TogglePriceType from "../togglePriceType/TogglePriceType";
-import DataChart from "../dataChart/DataChart";
-import Spinner from "@/app/components/spinner/Spinner";
 import { SelectChangeEvent } from "@mui/material";
+
+const DataChart = dynamic(() => import("../dataChart/DataChart"), {
+  ssr: false
+});
 
 export default function ChartComponent() {
   const params = useParams();
