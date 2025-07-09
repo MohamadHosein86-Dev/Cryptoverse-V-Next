@@ -1,11 +1,6 @@
 import Image from "next/image";
-import dynamic from "next/dynamic";
-const InterItem = dynamic(() => import("./InterItem"), {
-  ssr: false
-});
-const TitelAnimation = dynamic(() => import("../../animation/TitelAnimation"), {
-  ssr: false
-});
+import InterItem from "./InterItem";
+import TitelAnimation from "../../animation/TitelAnimation";
 
 export default function Introduction() {
   return (
