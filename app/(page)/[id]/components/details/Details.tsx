@@ -6,10 +6,10 @@ export default async function Details({ coin }: { coin: CoinDetailsType }) {
     <table className="bg-[#0d0d0d] text-white rounded-xl max-sm:w-full xl:w-[62.5rem]">
       <thead>
         <tr className="text-sm">
-          <th className="max-sm:hidden sm:block max-sm:w-[1rem] sm2:w-[4rem] text-start px-6 pb-4 pt-5 font-light text-[#999999]">#</th>
-          <th className="max-sm:w-[15rem] sm2:w-[23rem] p-4 text-start pt-5 font-light text-[#999999]">Name</th>
-          <th className="w-[5rem] p-4 text-start pt-5 font-light text-[#999999]">Price</th>
-          <th className="w-[8.3rem] p-4 text-start pt-5 font-light text-[#999999]">24h Change</th>
+          <th className="max-sm:hidden sm:block max-sm:w-4  text-start px-6 pb-4 pt-5 font-light text-[#999999]">#</th>
+          <th className="max-sm:w-60 sm2:w-[23rem] p-4 text-start pt-5 font-light text-[#999999]">Name</th>
+          <th className="w-20 p-4 text-start pt-5 font-light text-[#999999]">Price</th>
+          <th className=" w-45 p-4 text-start pt-5 font-light text-[#999999]">24h Change</th>
           <th className="p-4 text-start pt-5 font-light text-[#999999] max-sm:hidden md3:table-cell md3:pr-4 lg:pr-0">Total volume</th>
           <th className="p-4 text-start pt-5 font-light text-[#999999] max-sm:hidden lg:table-cell lg:pr-4 ">Market cap</th>
         </tr>

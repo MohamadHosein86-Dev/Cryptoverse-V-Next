@@ -31,12 +31,17 @@ export default function ChartComponent() {
     }
   };
 
+  if (isLoading)
+    return (
+      <div className=" mt-10 ">
+        <Spinner />
+      </div>
+    );
 
-  if (isLoading) return <Spinner />;
   if (!chartData || error)
     return (
-      <div className=" bg-black h-screen  w-1/2 flex flex-col gap-8 items-center    ">
-        <div className=" mx-4 px-4  py-8 rounded-2xl  sm:mx-auto mt-8 border border-snowBorder font-semibold cursor-pointer  sm:w-3/5  text-red-500 text-center text-sm sm:text-lg">
+      <div className=" bg-black  w-full  md:w-1/2 flex flex-col gap-8 items-center  ">
+        <div className=" mx-4 px-4  py-8 rounded-2xl  sm:mx-auto my-8 border border-snowBorder font-semibold cursor-pointer  sm:w-3/5  text-red-500 text-center text-sm sm:text-lg">
           <p>{error?.message} - Error while loading currencies. Please try again later</p>
         </div>
       </div>

@@ -5,10 +5,10 @@ type DescriptionProps = {
 
 const Description = ({ description, name }: DescriptionProps) => {
   return (
-    <div className="bg-dark text-white xl:w-[62.5rem] p-4 rounded-xl flex flex-col gap-3">
-      <h1 className="text-xl">{name}</h1>
+    <div className="bg-dark  xl:w-[62.5rem] p-4 rounded-xl flex flex-col gap-3">
+      <h1 className=" text-xl sm:text-2xl text-primary ">{name}</h1>
       <p
-        className="coin-description leading-6 text-sm text-justify"
+        className="coin-description text-[12px] sm:text-sm  leading-6  text-justify"
         dangerouslySetInnerHTML={{
           __html: description
         }}

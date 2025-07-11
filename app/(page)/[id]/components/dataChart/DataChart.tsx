@@ -37,6 +37,13 @@ function movingAverage(data: number[], windowSize = 5): number[] {
 const DataChart = ({ chartData }: DataChartType) => {
   const chartRef = useRef(null);
 
+  const formattedLabels = chartData.labels.map((label) => {
+    const date = new Date(label);
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    return `${day}/${month}`;
+  });
+
   const options: ChartOptions<"line"> = {
     plugins: {
       legend: { display: false },
@@ -55,8 +62,8 @@ const DataChart = ({ chartData }: DataChartType) => {
       y: {
         position: "left",
         ticks: {
-          color: "#ccc",
-          font: { size: 14 }
+          color: "#777",
+          font: { size: 12 }
         },
         grid: {
           display: false
@@ -65,7 +72,10 @@ const DataChart = ({ chartData }: DataChartType) => {
       x: {
         ticks: {
           color: "#777",
-          font: { size: 12 }
+          font: { size: 12 },
+          align: "center",
+          padding: 10,
+          maxTicksLimit: 25
         },
         grid: {
           display: false
@@ -76,11 +86,11 @@ const DataChart = ({ chartData }: DataChartType) => {
 
   const smoothedDatasets = chartData.datasets.map((dataset) => ({
     ...dataset,
-    data: movingAverage(dataset.data as number[], 150)
+    data: movingAverage(dataset.data as number[], 40)
   }));
 
   const styledData: ChartDataType = {
-    labels: chartData.labels,
+    labels: formattedLabels,
     datasets: smoothedDatasets.map((dataset) => ({
       ...dataset,
       borderWidth: 3.5,
@@ -100,7 +110,7 @@ const DataChart = ({ chartData }: DataChartType) => {
   };
 
   return (
-    <div style={{ height: 400, width: "100%" }}>
+    <div className=" h-50 sm:h-100 sm:w-full ">
       <Line ref={chartRef} data={styledData} options={options} plugins={[glowLinePlugin]} />
     </div>
   );
