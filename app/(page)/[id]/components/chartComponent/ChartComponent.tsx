@@ -30,6 +30,9 @@ export default function ChartComponent() {
       setPriceType(newPriceType);
     }
   };
+  console.log("koss = " + chartData?.datasets.map((res) => res.data).map((res) => res).length);
+
+  const array = chartData?.datasets.map((res) => res.data);
 
   if (isLoading) return <Spinner />;
   if (!chartData || error)
