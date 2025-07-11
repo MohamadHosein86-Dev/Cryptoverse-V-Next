@@ -76,7 +76,7 @@ const DataChart = ({ chartData }: DataChartType) => {
 
   const smoothedDatasets = chartData.datasets.map((dataset) => ({
     ...dataset,
-    data: movingAverage(dataset.data as number[], 100)
+    data: movingAverage(dataset.data as number[], 150)
   }));
 
   const styledData: ChartDataType = {
