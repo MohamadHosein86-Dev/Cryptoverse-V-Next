@@ -9,7 +9,6 @@ type DataChartType = {
   chartData: ChartDataType;
 };
 
-// پلاگین سفارشی برای Glow
 const glowLinePlugin = {
   id: "glowLine",
   beforeDatasetsDraw: (chart: Chart) => {
@@ -26,7 +25,6 @@ const glowLinePlugin = {
   }
 };
 
-// تابع moving average برای صاف کردن داده‌ها
 function movingAverage(data: number[], windowSize = 5): number[] {
   return data.map((val, idx, arr) => {
     const start = Math.max(0, idx - Math.floor(windowSize / 2));
