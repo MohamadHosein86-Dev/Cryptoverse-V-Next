@@ -1,3 +1,5 @@
+"use client";
+
 import { Skeleton } from "@mui/material";
 import { motion } from "framer-motion";
 
