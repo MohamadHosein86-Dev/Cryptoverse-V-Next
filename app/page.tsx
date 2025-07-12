@@ -2,13 +2,13 @@ import Introduction from "./components/home/Introduction/Introduction";
 import CoinTableHomePage from "./components/home/cointable/CoinTableHomePage";
 import AboutCrypto from "./components/home/aboutcrypto/AboutCrypto";
 import { Suspense } from "react";
-import Spinner from "./components/spinner/Spinner";
+import LoadingTable from "./components/table/LoadingTable";
 
 export default function Home() {
   return (
     <main>
       <Introduction />
-      <Suspense fallback={<Spinner />}>
+      <Suspense fallback={<LoadingTable />}>
         <CoinTableHomePage />
       </Suspense>
       <AboutCrypto />
