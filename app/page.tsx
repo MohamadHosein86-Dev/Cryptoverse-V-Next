@@ -6,7 +6,7 @@ import LoadingTable from "./components/table/LoadingTable";
 
 export default function Home() {
   return (
-    <main>
+    <main className=" container ">
       <Introduction />
       <Suspense fallback={<LoadingTable />}>
         <CoinTableHomePage />

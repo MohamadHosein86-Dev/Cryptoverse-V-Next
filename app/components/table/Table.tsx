@@ -5,7 +5,7 @@ import { CoinType } from "@/app/types/DataTypes";
 
 export default function Table({ coins }: { coins: CoinType[] }) {
   return (
-    <table className="bg-dark z-10 w-[90%] sm:w-[55%] rounded-xl">
+    <table className="bg-dark z-10 w-[90%] sm:w-[58%] rounded-xl">
       <thead>
         <tr className="text-sm text-snow ">
           <th className="max-sm:hidden sm:block max-sm:w-[1rem] sm2:w-[4rem] text-start px-6 pb-4 pt-5 font-light ">#</th>

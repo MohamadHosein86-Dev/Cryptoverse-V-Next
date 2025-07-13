@@ -7,7 +7,7 @@ import Logo from "../logo/Logo";
 export default function Header() {
   return (
     <header className=" bg-dark border-1 border-primaryBorder ">
-      <section className="  flex items-center justify-between mx-auto max-w-[90rem] py-3 px-5 ">
+      <section className="  flex items-center py-4 justify-between container ">
         <Logo />
         <NavBarDescktop />
         <NavBarMobile />
