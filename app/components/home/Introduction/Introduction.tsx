@@ -13,7 +13,7 @@ export default function Introduction() {
         <div className="w-full z-10 flex flex-col justify-center items-center gap-8 max-sm:w-80   lg:w-200 ">
           <TitelAnimation delay={0.3} className="flex flex-col items-center justify-center gap-4 w-full">
             <h1 className=" text-normal sm:text-2xl font-bold text-white text-center">Cryptocurrency Price and Trend Monitor</h1>
-            <p className="text-center text-snow ">Monitor cryptocurrency prices and trends with our streamlined tracker, designed to help you manage your portfolio and make informed investment decisions.</p>
+            <p className="text-center text-gray-300 ">Monitor cryptocurrency prices and trends with our streamlined tracker, designed to help you manage your portfolio and make informed investment decisions.</p>
           </TitelAnimation>
           <TitelAnimation delay={0.5} className="w-full flex items-center justify-center flex-wrap max-sm:gap-6 sm:gap-4 md:gap-8">
             <InterItem titel="Price tracking" IconName="coins" />

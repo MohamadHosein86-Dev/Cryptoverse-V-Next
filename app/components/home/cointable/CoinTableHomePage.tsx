@@ -9,7 +9,7 @@ export default async function CoinTableHomePage() {
   return (
     <div className=" flex flex-col items-center gap-4 mx-auto ">
       <Table coins={coins} />
-      <Link href="/coins" className="px-4 py-2  mx-auto rounded-2xl border-1 text-white border-[#404040] bg-black hover:bg-dark-hover transition-all">
+      <Link href="/coins" className="px-4 py-2  mx-auto rounded-2xl border-1 text-white border-[#404040] bg-black hover:bg-surface-800 transition-all">
         See more
       </Link>
     </div>

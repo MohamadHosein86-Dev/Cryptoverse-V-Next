@@ -4,7 +4,7 @@ import IntroductionFooter from "./components/introductionFooter/IntroductionFoot
 
 export default function Footer() {
   return (
-    <footer className=" bg-dark mt-34 border-1 border-primaryBorder ">
+    <footer className=" bg-surface-900 mt-34 border-1 border-primary-border ">
       <div className=" pt-16 px-14 text-white container ">
         <div className=" justify-center flex flex-wrap md:justify-between mb-8">
           <div className="w-full text-center md:text-left md:w-1/3 mb-6 md:mb-0">

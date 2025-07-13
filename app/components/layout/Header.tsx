@@ -6,7 +6,7 @@ import Logo from "../logo/Logo";
 
 export default function Header() {
   return (
-    <header className=" bg-dark border-1 border-primaryBorder ">
+    <header className=" bg-surface-900 border-1 border-primary-border ">
       <section className="  flex items-center py-4 justify-between container ">
         <Logo />
         <NavBarDescktop />

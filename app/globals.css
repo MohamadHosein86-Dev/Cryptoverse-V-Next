@@ -1,25 +1,30 @@
 @import "tailwindcss";
 
+@theme {
+
+  /* color */
+  --color-primary: #ff9332;
+  --color-secondary: #7678d5;
+  --color-surface-900: #0D0D0D;
+  --color-surface-800: #262626;
+  --color-surface-700: #1a1a1a;
+  --color-gray-500: #5C5C5B;
+  --color-gray-300: #999999;
+  --color-primary-border: #aaaaaa3c;
+
+  /* text */
+  --text-normal: 1rem;
+}
+
 @font-face {
   font-family: "poppins_regular";
   src: url(/fonts/Poppins-Medium.ttf);
 }
-@theme {
-  --color-primary: #ff9332;
-  --color-secondary: #7678d5;
-
-  --color-dark: #0D0D0D;
-  --color-dark-hover: #262626;
-  --color-soft: #1a1a1a;
-  --color-gray1: #5C5C5B;
-
-  --color-snow: #999999;
-  --color-primaryBorder: #aaaaaa3c;
-
+*{
+  scrollbar-width: thin;
+  scrollbar-color: #ff9332 #0D0D0D;
 }
-:root {
-  --text-normal: 1rem;
-}
+
 @layer base {
   * {
     outline: none;
@@ -45,6 +50,7 @@
     @media (min-width: 1920px) { padding-inline: 6.25rem; }
   }
 }
+
 @media only screen and (max-width: 1300px) {
   :root {
     --text-normal: 0.875rem;
@@ -54,43 +60,4 @@
   :root {
     --text-normal: 0.75rem;
   }
-}
-
-
-
-
-/*  */
-.ham {
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  transition: transform 400ms;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.hamRotate.active {
-  transform: rotate(45deg);
-}
-.hamRotate180.active {
-  transform: rotate(180deg);
-}
-.line {
-  fill: none;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: #fff;
-  stroke-width: 4;
-  stroke-linecap: round;
-}
-.ham1 .top {
-  stroke-dasharray: 40 139;
-}
-.ham1 .bottom {
-  stroke-dasharray: 40 180;
-}
-.ham1.active .top {
-  stroke-dashoffset: -98px;
-}
-.ham1.active .bottom {
-  stroke-dashoffset: -138px;
 }

@@ -21,7 +21,7 @@ export default function InterItem({ titel, IconName }: { titel: string; IconName
   };
 
   return (
-    <div className="w-32 h-32 rounded-xl bg-soft text-white flex flex-col gap-4 items-center justify-center cursor-pointer hover:-translate-y-2 transition-all hover:border-primary border border-soft  ">
+    <div className="w-32 h-32 rounded-xl bg-surface-700 text-white flex flex-col gap-4 items-center justify-center cursor-pointer hover:-translate-y-2 transition-all hover:border-primary border border-surface-700  ">
       {icon()}
       <p className="text-sm">{titel}</p>
     </div>

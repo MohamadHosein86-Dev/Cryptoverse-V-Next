@@ -17,7 +17,7 @@ export default function NavBarMobile() {
 
   return (
     <nav className=" sm:hidden max-sm:block z-50  ">
-      <div className={`bg-soft ${openSideMenu ? "w-52" : "w-0"} transition-all duration-300 h-[428%] absolute right-0 top-0 overflow-x-hidden `}>
+      <div className={`bg-surface-700 ${openSideMenu ? "w-52" : "w-0"} transition-all duration-300 h-[428%] absolute right-0 top-0 overflow-x-hidden `}>
         <nav className=" flex flex-col gap-4 p-4 mt-16">
           {navLinks.map((res) => (
             <Link key={res.id} className="hover:text-primary text-white transition-all p-1" href={res.href}>

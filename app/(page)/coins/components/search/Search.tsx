@@ -26,7 +26,7 @@ const Search = () => {
 
   return (
     <form className=" max-sm:w-[19.5rem] flex items-center mb-8 sm:w-[27rem] lg:w-1/2 h-11 ">
-      <div onSubmit={handleSubmit} className=" flex gap-3 w-full items-center pr-0 p-4 text-white bg-dark rounded-xl">
+      <div onSubmit={handleSubmit} className=" flex gap-3 w-full items-center pr-0 p-4 text-white bg-surface-900 rounded-xl">
         <IoSearchOutline className="fill-[#0b8bed]" size={25} />
         <input type="text" placeholder="Search..." className="w-full bg-transparent text-sm" value={query} onChange={(e) => setQuery(e.target.value)} />
       </div>
