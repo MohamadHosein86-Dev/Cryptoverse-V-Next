@@ -20,7 +20,7 @@ export default async function CoinsPage({ searchParams }: Props) {
   const filteredCoins = coins.filter((coin) => coin.name.toLowerCase().includes(search) || coin.symbol.toLowerCase().includes(search));
 
   return (
-    <div className="min-h-[86.2vh]  flex justify-start flex-col items-center mt-20 ">
+    <div className="min-h-[86.2vh]  flex justify-start flex-col items-center mt-20 container ">
       <Search />
       <CoinTableCoinsPage coins={filteredCoins} />
       {!search && <PaginationComponent totalPages={10} />}

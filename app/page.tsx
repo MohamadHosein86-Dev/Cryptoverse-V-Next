@@ -6,7 +6,7 @@ import LoadingTable from "./components/table/LoadingTable";
 
 export default function Home() {
   return (
-    <main className=" container ">
+    <main className=" min-h-[86.2vh]  flex justify-start flex-col items-center mt-20  container ">
       <Introduction />
       <Suspense fallback={<LoadingTable />}>
         <CoinTableHomePage />
