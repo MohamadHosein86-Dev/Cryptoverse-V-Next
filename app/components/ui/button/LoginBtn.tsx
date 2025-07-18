@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import LoginForm from "../form/LoginForm";
+import RegesterForm from "../form/RegesterForm";
 import Modal from "../../modal/Modal";
 
 export default function LoginBtn() {
@@ -12,7 +12,7 @@ export default function LoginBtn() {
       </button>
       <Modal center={true} isOpen={open} onClose={() => setOpen(false)}>
         <div>
-          <LoginForm setOpen={setOpen} />
+          <RegesterForm setOpen={setOpen} />
         </div>
       </Modal>
     </div>
