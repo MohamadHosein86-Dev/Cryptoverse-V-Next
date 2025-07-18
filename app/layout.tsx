@@ -3,6 +3,7 @@ import Header from "./components/layout/Header";
 import "./globals.css";
 import QueryProvider from "./providers/QueryProvider";
 import Footer from "./components/layout/Footer";
+import { SessionProviders } from "./providers/SessionProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,13 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <QueryProvider>
-        <body className={` bg-black antialiased`}>
-          <Header />
-          {children}
-          <Footer />
-        </body>
-      </QueryProvider>
+      <SessionProviders>
+        <QueryProvider>
+          <body className={` bg-black antialiased`}>
+            <Header />
+            {children}
+            <Footer />
+          </body>
+        </QueryProvider>
+      </SessionProviders>
     </html>
   );
 }

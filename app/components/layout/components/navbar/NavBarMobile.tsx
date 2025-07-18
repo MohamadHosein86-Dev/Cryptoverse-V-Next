@@ -24,7 +24,9 @@ export default function NavBarMobile() {
               {res.titel}
             </Link>
           ))}
-          <LoginBtn />
+          <div className="  mt-6 ">
+            <LoginBtn menu={true} />
+          </div>
         </nav>
       </div>
       <button onClick={() => setOpenSideMenu(!openSideMenu)} className="w-8 h-8 z-[100] relative justify-center items-center overflow-hidden max-sm:flex sm2:hidden">

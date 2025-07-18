@@ -1,0 +1,51 @@
+"use client";
+import { signOut, useSession } from "next-auth/react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { FaUser } from "react-icons/fa";
+import { Links } from "@/app/data/Data";
+import BtnDashboard from "@/app/components/ui/button/BtnDashboard";
+import Spinner from "@/app/components/spinner/Spinner";
+import PanleUser from "./panleUser/panleUser";
+
+export default function ProfileUser() {
+  const { data: session, status } = useSession();
+  const ruoterLink = useRouter();
+  const [, setshowmodal] = useState(false);
+
+  const name = session?.user?.name && session.user.name;
+  const phone = session?.user?.phone && session.user.phone;
+
+  if (status == "loading") return <Spinner />;
+
+  return (
+    <section className=" pb-20 mb-12  ">
+      <div className="container flex gap-4 mt-28 ">
+        <PanleUser />
+        <div className="  rounded-[16px] flex flex-col gap-3 w-full md:w-280 lg:w-120  xl:basis-1/3 ">
+          <div className=" rounded-[15px] px-4  border-1 border-white  py-5 flex gap-4  w-full ">
+            <img className=" w-12 " src="/e2946bbdae579b021ad972a47e0370a956703380.png" alt="" />
+            <p onClick={() => {}} className=" flex-col justify-center cursor-pointer flex  gap-1 text-white ">
+              <span className=" text-sm font-semibold ml-auto ">{name}</span>
+              <span className=" text-sm font-semibold ">{phone}</span>
+            </p>
+          </div>
+          <div className=" rounded-[15px]  pb-4 px-4 flex-col border-1 border-white gap-1 py-6 flex  ">
+            {Links.map((res) => (
+              <BtnDashboard key={res.titel} onclick={() => ruoterLink.push(`${res.herf}`)} icon={`${res.icon}`} rout={`${res.herf}`}>
+                {res.titel}
+              </BtnDashboard>
+            ))}
+            <BtnDashboard logout={true} onclick={() => signOut()} icon={""} rout="">
+              خروج
+            </BtnDashboard>
+            <BtnDashboard rout="/profile" icon="user" sm={true} onclick={() => setshowmodal((x) => !x)}>
+              <FaUser />
+              <p className="font-semibold text-[#3C3D45]">حساب کاربری</p>
+            </BtnDashboard>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

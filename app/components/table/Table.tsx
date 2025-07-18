@@ -11,7 +11,7 @@ export default function Table({ coins }: { coins: CoinType[] }) {
           <th className="max-sm:hidden sm:block max-sm:w-[1rem] sm2:w-[4rem] text-start px-6 pb-4 pt-5 font-light ">#</th>
           <th className=" w-60  p-4 text-start pt-5 font-light ">Name</th>
           <th className="w-20 p-4 text-start pt-5 font-light ">Price</th>
-          <th className="w-68 sm:w-42 p-4 text-start pt-5 font-light ">24h Change</th>
+          <th className="w-90 sm:w-42 p-4 text-start pt-5 font-light ">24h Change</th>
           <th className="p-4 text-start pt-5 font-light  max-sm:hidden md3:table-cell md3:pr-4 lg:pr-0">Total volume</th>
           <th className="p-4 text-start pt-5 font-light  max-sm:hidden lg:table-cell lg:pr-4 ">Market cap</th>
         </tr>
