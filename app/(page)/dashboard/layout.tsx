@@ -14,7 +14,6 @@ export default function ProfileUser() {
   const [, setshowmodal] = useState(false);
 
   const name = session?.user?.name && session.user.name;
-  const phone = session?.user?.phone && session.user.phone;
 
   if (status == "loading") return <Spinner />;
 

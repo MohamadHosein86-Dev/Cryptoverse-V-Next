@@ -12,9 +12,15 @@ export default function Acount() {
     return <div>شما وارد نشده‌اید.</div>;
   }
 
-  const name = session?.user?.name;
-  const email = session?.user?.email;
-  const phone = session?.user?.phone;
+  if (!session || !session.user) {
+    return <div>مشکلی در دریافت اطلاعات کاربر رخ داده است.</div>;
+  }
+
+  type CustomUser = typeof session.user & { phone?: string };
+  const user = session.user as CustomUser;
+  const name = user?.name;
+  const email = user?.email;
+  const phone = user?.phone;
 
   return (
     <div className=" hidden  md:block gap-8 rounded-[16px] border-1 border-[#E7E7E8] w-200  xl:basis-[70%] ">

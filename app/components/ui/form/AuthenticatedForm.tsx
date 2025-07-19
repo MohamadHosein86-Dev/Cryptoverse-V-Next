@@ -58,14 +58,10 @@ export default function AuthenticatedForm({ setOpen }: PropsType) {
   async function handleLogin(x: FormEvent<HTMLFormElement>) {
     x.preventDefault();
     try {
-      const result = await loginUser({ email, password });
-      if (result?.error) {
-        alert("Eamil or password is kir ");
-      } else {
-        router.push("/");
-      }
-    } catch {
-      alert("مشکلی در ورود پیش آمد.");
+      await loginUser({ email, password });
+      router.push("/");
+    } catch (err: any) {
+      alert(err?.message || "Email or password is incorrect");
     }
   }
 
