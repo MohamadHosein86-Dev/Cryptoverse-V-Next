@@ -20,8 +20,6 @@ export const footerLinks = [
 
 
 export const Links = [
-  { titel: "حساب کاربری", icon: "user", herf: "/dashboard" },
-  { titel: "سفارشات", icon: "order", herf: "/dashboard/order" },
-  { titel: "علاقه مندی ها", icon: "favarit", herf: "/dashboard/favarit" },
-  { titel: "ادرس های من", icon: "mylocation", herf: "/dashboard/mylocation" }
+  { titel: "Acount", icon: "user", herf: "/dashboard" },
+  { titel: "Favarit coins", icon: "favarit", herf: "/dashboard/favarit" },
 ];

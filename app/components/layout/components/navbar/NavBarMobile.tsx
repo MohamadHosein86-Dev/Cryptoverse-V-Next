@@ -3,8 +3,8 @@ import { navLinks } from "@/app/data/Data";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import LoginBtn from "../../../ui/button/LoginBtn";
 import HumbrgrMenu from "../humbrgrMenu/HumbrgrMenu";
+import Isauthenticated from "@/app/components/auth/Isauthenticated";
 
 export default function NavBarMobile() {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -25,7 +25,7 @@ export default function NavBarMobile() {
             </Link>
           ))}
           <div className="  mt-6 ">
-            <LoginBtn menu={true} />
+            <Isauthenticated menu={true} />
           </div>
         </nav>
       </div>

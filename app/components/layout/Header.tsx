@@ -1,8 +1,8 @@
 import React from "react";
 import NavBarDescktop from "./components/navbar/NavBarDescktop";
 import NavBarMobile from "./components/navbar/NavBarMobile";
-import LoginBtn from "../ui/button/LoginBtn";
 import Logo from "../logo/Logo";
+import Isauthenticated from "../auth/Isauthenticated";
 
 export default function Header() {
   return (
@@ -11,7 +11,7 @@ export default function Header() {
         <Logo />
         <NavBarDescktop />
         <NavBarMobile />
-        <LoginBtn />
+        <Isauthenticated />
       </section>
     </header>
   );

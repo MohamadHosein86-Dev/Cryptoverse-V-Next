@@ -20,7 +20,7 @@ export default function Acount() {
     <div className=" hidden  md:block gap-8 rounded-[16px] border-1 border-[#E7E7E8] w-200  xl:basis-[70%] ">
       <div className=" px-8  border-b-[1px] border-b-white  py-6 flex  w-full ">
         <h2 className="  font-bold text-white flex gap-[.3rem]  ">
-          <FaUser size={24} className=" mr-2 text-primary " />
+          <FaUser size={20} className=" mr-2 text-primary " />
           My Acount
         </h2>
       </div>
