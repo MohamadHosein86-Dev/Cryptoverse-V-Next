@@ -10,29 +10,29 @@ export type CoinType = {
   market_cap: number;
   total_volume: number;
   market_cap_rank: number;
-  description:{
-    en:string
+  description: {
+    en: string
   }
 };
 
 export type NavLinksType = {
   id: number;
-  titel:string;
-  href:string;
+  titel: string;
+  href: string;
 };
 
 export type AboutCryptoType = {
   id: number;
-  titel:string;
-  image:string;
-  description:string
+  titel: string;
+  image: string;
+  description: string
 };
 
 export type CoinDetailsType = {
   id: string;
   name: string;
   symbol: string;
-  market_cap_rank:string
+  market_cap_rank: string
   image: {
     large: string;
   };
@@ -78,3 +78,10 @@ export type ChartDataType = {
   datasets: Array<ChartDataset<"line", number[]>>; // Enforcing correct type for datasets
 };
 
+export type FormState = {
+  name: string;
+  email: string;
+  phone: string;
+  password: string;
+  CodeOtp: string;
+};

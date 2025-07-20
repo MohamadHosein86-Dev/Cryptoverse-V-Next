@@ -1,6 +1,21 @@
 "use client";
 
-export default function RegesterForm({ form, setForm, handleRegestr }: any) {
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  password: string;
+  CodeOtp: string;
+  [key: string]: string;
+}
+
+interface RegisterFormProps {
+  form: FormData;
+  setForm: React.Dispatch<React.SetStateAction<FormData>>;
+  handleRegestr: (e: React.FormEvent<HTMLFormElement>) => void;
+}
+
+export default function RegesterForm({ form, setForm, handleRegestr }: RegisterFormProps) {
   return (
     <form onSubmit={handleRegestr} className="max-w-sm mx-auto mt-12 flex flex-col gap-4">
       <label htmlFor="">Name</label>

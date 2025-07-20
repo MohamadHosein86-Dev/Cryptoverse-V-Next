@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import MIniSpinner from "../../spinner/MiniSpinner";
 
-export default function OtpForm({ CodeOtp, handleVerify }: any) {
+interface OtpFormProps {
+  CodeOtp: string;
+  handleVerify: (e: React.FormEvent<HTMLFormElement>) => void;
+}
+
+export default function OtpForm({ CodeOtp, handleVerify }: OtpFormProps) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {

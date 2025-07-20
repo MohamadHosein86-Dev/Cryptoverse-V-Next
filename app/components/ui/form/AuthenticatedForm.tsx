@@ -12,8 +12,15 @@ import LoginForm from "./LoginForm";
 interface PropsType {
   setOpen: (s: boolean) => void;
 }
+type FormState = {
+  name: string;
+  email: string;
+  phone: string;
+  password: string;
+  CodeOtp: string;
+};
 export default function AuthenticatedForm({ setOpen }: PropsType) {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", password: "", CodeOtp: "" });
+  const [form, setForm] = useState<FormState>({ name: "", email: "", phone: "", password: "", CodeOtp: "" });
   const [step, setStep] = useState("login");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -60,8 +67,12 @@ export default function AuthenticatedForm({ setOpen }: PropsType) {
     try {
       await loginUser({ email, password });
       router.push("/");
-    } catch (err: any) {
-      alert(err?.message || "Email or password is incorrect");
+    } catch (err) {
+      if (err && typeof err === 'object' && 'message' in err) {
+        alert((err as { message: string }).message || "Email or password is incorrect");
+      } else {
+        alert("Email or password is incorrect");
+      }
     }
   }
 
@@ -89,7 +100,7 @@ export default function AuthenticatedForm({ setOpen }: PropsType) {
         <AnimatePresence mode="wait">
           {step === "login" && (
             <motion.div key="login" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 50 }} transition={{ duration: 0.3 }}>
-              <LoginForm setForm={setForm} form={form} handleLogin={handleLogin} />
+              <LoginForm setForm={setForm} form={{ email: form.email, password: form.password }} handleLogin={handleLogin} />
             </motion.div>
           )}
           {step === "regester" && (

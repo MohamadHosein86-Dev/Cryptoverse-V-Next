@@ -6,8 +6,8 @@ import { MdLogout } from "react-icons/md";
 
 interface PropsType {
   children: React.ReactNode;
-  rout: string;
-  icon: string;
+  rout?: string;
+  icon?: string;
   onclick: () => void;
   sm?: boolean;
   logout?: boolean;

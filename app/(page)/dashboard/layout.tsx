@@ -10,7 +10,7 @@ import { FaUser } from "react-icons/fa";
 
 export default function ProfileUser() {
   const { data: session, status } = useSession();
-  const ruoterLink = useRouter();
+  const router = useRouter();
   const [, setshowmodal] = useState(false);
 
   const name = session?.user?.name && session.user.name;
@@ -32,11 +32,17 @@ export default function ProfileUser() {
           </div>
           <div className=" rounded-[15px]  pb-4 px-4 flex-col border-1 border-white gap-1 py-6 flex  ">
             {Links.map((res) => (
-              <BtnDashboard key={res.titel} onclick={() => ruoterLink.push(`${res.herf}`)} icon={`${res.icon}`} rout={`${res.herf}`}>
+              <BtnDashboard key={res.titel} onclick={() => router.push(`${res.herf}`)} icon={`${res.icon}`} rout={`${res.herf}`}>
                 {res.titel}
               </BtnDashboard>
             ))}
-            <BtnDashboard logout={true} onclick={() => signOut()} icon={""} rout="">
+            <BtnDashboard
+              logout={true}
+              onclick={() => {
+                signOut();
+                router.push("/");
+              }}
+            >
               {" "}
             </BtnDashboard>
             <BtnDashboard rout="/profile" icon="user" sm={true} onclick={() => setshowmodal((x) => !x)}>
