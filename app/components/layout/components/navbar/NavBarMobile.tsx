@@ -24,7 +24,7 @@ export default function NavBarMobile() {
               {res.titel}
             </Link>
           ))}
-          <div className="  mt-6 ">
+          <div className="  mt-2 ">
             <Isauthenticated menu={true} />
           </div>
         </nav>

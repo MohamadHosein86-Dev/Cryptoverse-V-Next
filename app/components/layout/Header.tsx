@@ -11,7 +11,9 @@ export default function Header() {
         <Logo />
         <NavBarDescktop />
         <NavBarMobile />
-        <Isauthenticated />
+        <div className=" hidden sm:block ">
+          <Isauthenticated />
+        </div>
       </section>
     </header>
   );

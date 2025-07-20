@@ -30,7 +30,7 @@ const Search = () => {
         <IoSearchOutline className="fill-[#0b8bed]" size={25} />
         <input type="text" placeholder="Search..." className="w-full bg-transparent text-sm" value={query} onChange={(e) => setQuery(e.target.value)} />
       </div>
-      <button type="submit" className=" text-white hidden text-sm ml-4  lg:block bg-primary py-3 px-5 rounded-md ">
+      <button type="submit" className=" text-white text-sm ml-2 sm:ml-4  lg:block bg-primary py-3 px-3 sm:py-3 sm:px-5 rounded-md ">
         search
       </button>
     </form>
