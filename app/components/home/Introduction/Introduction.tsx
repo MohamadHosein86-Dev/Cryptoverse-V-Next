@@ -4,7 +4,7 @@ import TitelAnimation from "../../animation/TitelAnimation";
 
 export default function Introduction() {
   return (
-    <div className="w-full max-sm:h-140 sm:h-120 flex justify-center items-center -mt-26 sm:pt-0 sm:pb-0 mb-10 sm:mb-0 ">
+    <div className="w-full max-sm:h-140 sm:h-120 flex justify-center items-center -mt-5 sm:-mt-26 sm:pt-0 sm:pb-0 mb-10 sm:mb-0 ">
       <div className="flex flex-col justify-center items-center relative">
         <div className="absolute w-full h-100 max-sm:hidden sm:block ">
           <Image src="/landingPage/Intro.webp" alt="intro-bg" fill className=" object-cover " />
